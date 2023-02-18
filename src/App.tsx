@@ -1,11 +1,12 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import "./App.css";
+import words from "./wordList.json";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  return <div className="App"></div>;
+  const [wordToGuess, setWordToGuess] = useState(() => {
+    return words[Math.floor(Math.random() * words.length)];
+  });
+  const [guessedLetters, setGuessedLetters] = useState<string[]>([]);
+  return <h1>Hi</h1>;
 }
 
 export default App;
