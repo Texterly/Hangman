@@ -1,4 +1,9 @@
-export function HangmanWord() {
+type HangmanWordProps = {
+  guessedLetters: string[];
+  wordToGuess: string;
+};
+
+export function HangmanWord({ guessedLetters, wordToGuess }) {
   const word = "test";
   const guessedLetters = ["t", "e", "g"];
   return (
